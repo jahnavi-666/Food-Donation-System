@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: rgb(45, 134, 139);
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        .b1 {
+            text-align: left;
+            font-size: 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -30px;
+        }
+
+        .button1 {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: rgb(152, 152, 151);
+            color: white;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px; 
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px;
+        }
+
+        .box {
+            width: 20%;
+            padding: 50px;
+            background-color: #fff; /* Default background color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: border 0.3s; /* Smooth transition for border change */
+        }
+
+        .box:hover {
+            border: 2px solid #db347f; /* Border color on hover */
+        }
+
+        /* Different background colors for each box */
+        .box:nth-child(1) {
+            background-color: #f2dede; /* Box 1 color */
+        }
+
+        .box:nth-child(2) {
+            background-color: #dff0d8; /* Box 2 color */
+        }
+
+        .box:nth-child(3) {
+            background-color: #fcf8e3; /* Box 3 color */
+        }
+
+        /* Placeholder for logos */
+        .box img {
+            max-width: 100%;
+            max-height: 100px;
+            margin-bottom: 10px;
+        }
+
+        /* Section for social media logos with a black background */
+        .social-logos {
+            padding: 5%;
+            text-align: center;
+        }
+
+        .social-logos img {
+            width: 50px; /* Adjust the size of the logos */
+            margin: 0 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="f.html"> 
+                <img src="logo1.jpg" alt="Feed Forward Logo" class="logo">
+            </a>
+            <p class="b1">FEED FORWARD</p>
+        </div>
+        <nav>
+            <a href="http://127.0.0.1:5500/f.html" class="button1">Home</a>
+            <a href="http://127.0.0.1:5500/aboutus.html" class="button1">About Us</a>
+            <a href="http://127.0.0.1:5500/joinnow.html" class="button1">Join Now</a>
+            <a href="http://127.0.0.1:5500/contactus.html" class="button1">Contact Us</a>
+        </nav>
+    </header>
+    
+
+    <div class="box-container">
+        <!-- Your existing boxes here -->
+
+        <div class="box">
+            <img src="office.jpg" alt="Logo 1">
+            <h2 style="color: navy;">Address</h2>
+            <p>150 Gunfoundry, Abids, Woodside, CA 94062</p>
+        </div>
+        <div class="box">
+            <img src="phone.jpg" alt="Logo 2">
+            <h2 style="color: navy;">Phone Number</h2>
+            <p>+91 9398575650</p>
+            <p>+91 7815854124</p>
+        </div>
+        <div class="box">
+            <img src="email.jpg" alt="Logo 3">
+            <h2 style="color: navy;">Email Id</h2>
+            <a href="mailto:feedforward01@gmail.com"><p>feedforward01@gmail.com</p></a>
+        </div>
+    </div>
+    
+
+    <!-- Section for social media logos -->
+    <div class="social-logos">
+        <a href="https://www.facebook.com/profile.php?id=61554362056175&mibextid=hIlR13"><img src="face.jpg" alt="Facebook">
+        <a href="https://www.instagram.com/feedforward__?igshid=MTNiYzNiMzkwZA=="><img src="Insta.jpg" alt="Instagram">
+        <a href="https://twitter.com/feedforward01"><img src="tweet.jpg" alt="Twitter">
+        <a href="#"><img src="you.jpg" alt="YouTube">
+    </div>
+</body>
+</html>

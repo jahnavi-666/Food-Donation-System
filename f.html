@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: rgb(45, 134, 139);
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            width: 100%;
+            z-index: 1000;
+            transition: transform 0.3s ease-in-out;
+        }
+        .b1 {
+            text-align: left;
+            font-size: 40px;
+        }
+        .button1 {
+            display:inline-block;
+            padding: 10px 20px;
+            text-decoration:none;
+            background-color: rgb(152, 152, 151);
+            color: white;
+            border-radius: 20px;
+            float: right;
+            margin-right: 20px;
+            margin-top: -30px;
+        }
+        .mySlides {
+            display:none;
+            width: 100%;
+            height: 70%;
+            margin: auto;
+        }
+        .arrow {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -25px;
+            padding: 16px;
+            color: black;
+            font-weight: bold;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .arrow-left {
+            left: 0;
+        }
+        .arrow-right {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .dot-container {
+            text-align: center;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        section {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .info-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .info-block {
+            flex: 0 0 30%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .info-block:hover {
+            background-color: #e0e0e0;
+        }
+
+        .info-image {
+            max-width: 100%;
+            height: 250px ;
+            border-radius: 8px;
+        }
+
+        .info-text {
+            margin-top: 15px;
+            color: #555;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .donate-button {
+            background-color: #FF6347; /* Tomato color */
+            color: #fff;
+        }
+
+        .secure-button {
+            background-color: #008080; /* Teal color */
+            color: #fff;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px; 
+            height: auto;
+            margin-right: 10px;
+        }
+        /*.social-icons-container {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            /transform: translateX(-50%);/
+            /*background-color: #333;
+            padding: 10px;
+            display: flex;
+            /flex-direction: column;/
+            /align-items: center;/
+            /*justify-content: flex-end;
+        }*/
+        .social-icons-container {
+            position: relative;
+            width: 97%; 
+            margin: 0 auto; 
+            background-color: #333;
+            padding: 30px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        /*.fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }*/
+        .fa {
+            padding: 10px;
+            font-size: 20px;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px;
+            border-radius: 50%;
+            background-color: #ccc; /* Grey background color */
+            color: #333; /* Icon color */
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #bbbdc1;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #bbbdc1;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bbbdc1;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #bbbdc1;
+            color: white;
+        }
+        .logo-container-bottom {
+    display:flex;
+    align-items: center;
+    margin-right: auto;
+    padding-right: 20px; /* Adjust as needed */
+}
+
+.logo-container-bottom .logo {
+    width: 60px; /* Adjust the size of the logo as needed */
+    
+    margin-right: 10px;
+}
+
+.logo-container-bottom .b1 {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #fff;
+}
+
+
+        </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="f.html"> 
+                <img src="logo1.jpg" alt="Feed Forward Logo" class="logo">
+            </a>
+            <p class="b1">FEED FORWARD</p>
+        </div>
+        <div>
+            <a href="http://127.0.0.1:5500/contactus.html" class="button1">Contact Us</a>
+            <a href="http://127.0.0.1:5500/joinnow.html" class="button1">Join Now</a>
+            <a href="http://127.0.0.1:5500/aboutus.html" class="button1">About Us</a>
+            <a href="http://127.0.0.1:5500/f.html" class="button1">Home</a>
+        </div>
+    </header>
+    <div class="w3-content w3-display-container">
+        <button class="arrow arrow-left w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <img class="mySlides" src="i11.jpg" alt="Image 1">
+        <img class="mySlides" src="i2.jpg" alt="Image 2">
+        <img class="mySlides" src="i3.jpg" alt="Image 3">
+        
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <button class="arrow arrow-right w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+    <section>
+        <h2 style="color: rgb(37, 81, 109); font-size: 50px;"  >How It Works</h2>
+        
+        <div class="info-container">
+            <div class="info-block" onmouseover="highlightBlock(this)" onmouseout="unhighlightBlock(this)">
+                <img class="info-image" src="f1.jpg" alt="Image 1">
+                <p class="info-text"> <p style="font-size: 23px;text-align: center;">Food is Donated</p>
+                    Farms, restaurants, cafeterias, hotels, stadiums, and grocery stores post excess food in under a minute on the Waste No Food app.</p>
+            </div>
+
+            <div class="info-block" onmouseover="highlightBlock(this)" onmouseout="unhighlightBlock(this)">
+                <img class="info-image" src="f2.jpg" alt="Image 2">
+                <p class="info-text"> <p style="font-size: 23px;text-align: center;">Food is Secured</p>
+                Pre-vetted charities immediately get notified about food donations and can claim any donations they can use to serve hungry clients.</p>
+            </div>
+
+            <div class="info-block" onmouseover="highlightBlock(this)" onmouseout="unhighlightBlock(this)">
+                <img class="info-image" src="f3.jpg" alt="Image 3">
+                <p class="info-text"> <p style="font-size: 23px;text-align: center;">Food Is Picked Up</p>
+                The charity, or a network of volunteers, picks up the food and serves it to hungry people.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function highlightBlock(element) {
+            element.style.backgroundColor = "rgb(45, 134, 139)"; 
+        }
+
+        function unhighlightBlock(element) {
+            element.style.backgroundColor = "#fff";
+        }
+    </script>
+    <div class="button-container">
+        <a href="http://127.0.0.1:5500/donatefood.html" class="button donate-button">Donate Food</a>
+        <a href="http://127.0.0.1:5500/secure.html" class="button secure-button">Secure Food</a>
+    </div>
+    <br>
+    <div class="social-icons-container">
+        <div class="logo-container-bottom">
+            <a href="f.html"> 
+                <img src="logo1.jpg" alt="Feed Forward Logo" class="logo">
+            </a>
+            <p style="font-size: medium;font-weight: 200;color: #bbb;">Feed Forward</p>
+        </div>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+    </div>
+
+</body>
+</html>
