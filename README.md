@@ -1,0 +1,1 @@
+Here in this project the nearest shelters are calculated by calculating the difference between user's current location and the restaurants, orphanages etc. location by their latitudes and longitudes. The rest part is as normal frontend.  
